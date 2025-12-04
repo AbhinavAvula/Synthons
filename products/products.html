@@ -1,0 +1,65 @@
+<!-- products.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | Synthons</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;">
+  <link rel="stylesheet" href="../products/product-styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+      <a href="../index.html" class="logo-link">
+        <div class="logo">
+            <img src="../assets/logo-symbol.png" alt="Synthons Symbol" class="logo-symbol">
+            <img src="../assets/company-name.png" alt="Synthons Name" class="logo-text">
+        </div>
+      </a>
+      <nav>
+          <ul>
+              <li><a href="../index.html">HOME</a></li>
+              <li><a href="../products/products.html">PRODUCTS</a></li>
+              <li><a href="../aboutus/aboutus.html">ABOUT US</a></li>
+              <li><a href="../contact/contact.html">CONTACT</a></li>
+          </ul>
+      </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="products-container">
+    <h1>Our Products</h1>
+
+    <!-- Search and Filter Bar -->
+    <div class="filter-bar">
+      <input type="text" id="searchInput" placeholder="Search products" maxlength="100">
+      
+      <select id="categoryFilter">
+        <option value="">All Categories</option>
+        <!-- Options will be filled dynamically from Excel/CSV data -->
+      </select>
+    </div>
+
+    <!-- Products Table -->
+    <div class="table-container">
+        <table id="productsTable">
+        <thead>
+            <tr>
+            <th>Product Name</th>
+            <th>CAS No</th>
+            <th>Category</th>
+            <th>Purity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be populated by JS -->
+        </tbody>
+        </table>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="../products/pro.js"></script>
+</body>
+</html>
